@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.UUID;
 
+
 @Entity
 @Table(name = "Dados_cliente")
 public class Product implements Serializable {
@@ -16,6 +17,7 @@ public class Product implements Serializable {
     private UUID uuid;
 
     private String nome;
+    private String email;
     private String message;
 
     public UUID getUuid() {
@@ -32,6 +34,14 @@ public class Product implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getMessage() {

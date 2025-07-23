@@ -9,8 +9,8 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaTopicConfig {
 
     @Bean
-    public NewTopic HelloWorldTopic(){
-        return TopicBuilder.name("Hello-world")
+    public NewTopic TopicCozinha(){
+        return TopicBuilder.name("Cozinha")
                 .partitions(1)
                 .replicas(1)
                 .build();
@@ -19,6 +19,30 @@ public class KafkaTopicConfig {
     @Bean
     public NewTopic DivisionTopic(){
         return TopicBuilder.name("RegisterMessage")
+                .partitions(1)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic TopicProducao(){
+        return TopicBuilder.name("Producao")
+                .partitions(1)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic TopicAumoxarifado(){
+        return TopicBuilder.name("Aumoxarifado")
+                .partitions(1)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic TopicRecurHumam(){
+        return TopicBuilder.name("RecurHumam")
                 .partitions(1)
                 .replicas(1)
                 .build();

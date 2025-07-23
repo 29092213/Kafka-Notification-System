@@ -21,4 +21,25 @@ public class ProductConsumer {
     public void ReceiveMesssage(String message){
         logger.info("Temos um novo chamado, referente a este ID: " + message);
     }
+
+    @KafkaListener(topics = "Aumoxarifado", groupId = "group-1")
+    public void ReceiveAumoxarifado(String messsage){
+        logger.info("Recebemos um chamados com esse ID: " + messsage);
+    }
+
+    @KafkaListener(topics = "Producao", groupId = "group-1")
+    public void ReceiveProducao(String messsage){
+        logger.info("Recebemos um chamados com esse ID: " + messsage);
+    }
+
+    @KafkaListener(topics = "RecurHumam", groupId = "group-1")
+    public void ReceiveRecurHumanm(String messsage){
+        logger.info("Recebemos um chamados com esse ID: " + messsage);
+    }
+
+    @KafkaListener(topics = "Cozinha", groupId = "group-1")
+    public void ReceiveCozinha(String messsage){
+        logger.info("Recebemos um chamados com esse ID: " + messsage);
+    }
+
 }
